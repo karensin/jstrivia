@@ -1,0 +1,416 @@
+{
+    "cards": {
+        "basic": [
+            {
+                "question": "What is Scope in Javascript? ",
+                "answer": "In JavaScript, each function gets its own scope. Scope is basically a collection of variables as well as the rules for how those variables are accessed by name. Only code inside that function can access that function's scoped variables.A variable name has to be unique within the same scope. A scope can be nested inside another scope. If one scope is nested inside another, code inside the innermost scope can access variables from either scope."
+            },
+            {
+                "question": "Explain equality in JavaScript",
+                "answer": "Strict comparison (e.g., ===) checks for value equality without allowing coercion Abstract comparison (e.g. ==) checks for value equality with coercion var a = '42' var b = 42a == b; // true a === b; // false",
+                "note": "Some simple equalityrules:If either value (aka side) in a comparison could be the true or false value, avoid == and use ===. If either value in a comparison could be of these specific values (0, or [] -- empty array), avoid == and use === In all other cases, you're safe to use ==. Not only is it safe, but in many cases it simplifies your code in a way that improves readability."
+            },
+            {
+                "question": "Explain the typeof operator",
+                "answer": "The operand can be either a literal or a data structure such as a variable, a function, or an object. for example you can check if a typeof blah is a - undefined, string, number, boolean, object. When you set a variable to null, it is also an obj "
+            },
+            {
+                "question": "Explain arrays in JavaScript",
+                "answer": "An array is an object that holds values (of any type) not particularly in named properties/keys, but rather in numerically indexed positions"
+            },
+            {
+                "question": "What is the object type?, what are the ways to access key:value in objects?",
+                "answer": "The object type refers to a compound value where you can set properties (named locations) that each hold their own values of any type. obj={key:value} "
+            },
+            {
+                "question": "Name all the typed values- 6 total",
+                "answer": "string,number,boolean, null and undefined,object,symbol (new to ES6)"
+            },
+            {
+                "question": "What is strict mode?, what are some benefits for this?",
+                "answer": "Strict Mode was a new feature in ECMAScript 5 that allows you to place a program, or a function, in a “strict” operating context. This strict context prevents certain actions from being taken and throws more exceptions. The statement “use strict”; instructs the browser to use the Strict mode, which is a reduced and safer feature set of JavaScript. Benefits: It prevents, or throws errors, when relatively “unsafe” actions are taken (such as gaining access to the global object) Strict mode makes it easier to write “secure” JavaScript."
+            },
+            {
+                "question": "How would you check if a number is an integer?--without using isInteger()",
+                "answer": "function isInt(num) {return num % 1 === 0;}"
+            },
+            {
+                "question": "Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?",
+                "answer": "Every script has access to the global scope, and if everyone uses the global namespace to define their variables, collisions will likely occur. Use the module pattern (IIFEs) to encapsulate your variables within a local namespace."
+            },
+            {
+                "question": "Explain Null and Undefined in JavaScript",
+                "answer": "JavaScript (and by extension TypeScript) has two bottom types: null and undefined. They are intended to mean different things:Something hasn't been initialized : undefined.Something is currently unavailable: null."
+            },
+            {
+                "question": "What is JavaScript?",
+                "answer": "JavaScript is a lightweight, interpreted programming language with object-oriented capabilities that allows you to build interactivity into otherwise static HTML pages. The general-purpose core of the language has been embedded in Netscape, Internet Explorer, and other web browsers."
+            },
+            {
+                "question": "What are the features of JavaScript?",
+                "answer": "It is a lightweight, interpreted programming language.It is designed for creating network-centric applications.It is complementary to and integrated with Java.It is an open and cross-platform scripting language."
+            },
+            {
+                "question": " Is JavaScript a case-sensitive language? if so how, if not can you name a language that is?",
+                "answer": "Yes, JavaScript is a case sensitive language.  The language keywords, variables, function names, and any other identifiers must always be typed with a consistent capitalization of letters."
+            },
+            {
+                "question": " What are the advantages of JavaScript?",
+                "answer": " 1.Less server interaction − You can validate user input before sending the page off to the server. This saves server traffic, which means less load on your server. 2.Immediate feedback to the visitors − They don’t have to wait for a page reload to see if they have forgotten to enter something. 3.Increased interactivity − You can create interfaces that react when the user hovers over them with a mouse or activates them via the keyboard. 4.Richer interfaces − You can use JavaScript to include such items as drag-and-drop components and sliders to give a Rich Interface to your site visitors."
+            },
+            {
+                "question": "What are the variable naming conventions/rules in JavaScript",
+                "answer": " 1. You should not use any of the JavaScript reserved keyword as variable name. For example, break or boolean variable names are not valid. 2. JavaScript variable names should not start with a numeral (0-9). They must begin with a letter or the underscore character. For example, 123name is an invalid variable name but _123name or name123 is a valid one. 3.JavaScript variable names are case sensitive. For example, Test and test are two different variables."
+            },
+            {
+                "question": "What is the difference between Attributes and Property?",
+                "answer": "Attributes-  provide more details on an element like id, type, value etc. Property- is the value assigned to the property like type=”text”, value=’Name’ etc."
+            },
+            {
+                "question": "What is a Typed language?",
+                "answer": "Typed Language is in which the values are associated with values and not with variables. It is of two types: Dynamically: in this, the variable can hold multiple types; like in JS a variable can take number, chars. Statically: in this, the variable can hold only one type, like in Java a variable declared of string can take only set of characters and nothing else."
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            }
+        ],
+        "API related": [
+            {
+                "question": "Explain the same-origin policy with regards to JavaScript. what restriction will your browser display?",
+                "answer": "CORS-The same-origin policy prevents JavaScript from making requests across domain boundaries. An origin is defined as a combination of URI scheme, hostname, and port number. This policy prevents a malicious script on one page from obtaining access to sensitive data on another web page through that page's Document Object Model."
+            },
+            {
+                "question": "What are the scopes of a variable in JavaScript?",
+                "answer": "The scope of a variable is the region of your program in which it is defined. JavaScript variable will have only two scopes.• Global Variables − A global variable has global scope which means it is visible everywhere in your JavaScript code.• Local Variables − A local variable will be visible only within a function where it is defined. Function parameters are always local to that function."
+            },
+            {
+                "question": "What is the purpose of ‘This’ operator in JavaScript?",
+                "answer": "The JavaScript this keyword refers to the object it belongs to. This has different values depending on where it is used. In a method, this refers to the owner object and in a function, this refers to the global object."
+            },
+            {
+                "question": "What is the difference between Local storage & Session storage?",
+                "answer": "Local Storage – The data is not sent back to the server for every HTTP request (HTML, images, JavaScript, CSS, etc) – reducing the amount of traffic between client and server. It will stay until it is manually cleared through settings or program. Session Storage – It is similar to local storage; the only difference is while data stored in local storage has no expiration time, data stored in session storage gets cleared when the page session ends. Session Storage will leave when the browser is closed."
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            }
+        ],
+        "Advanced js": [
+            {
+                "question": " Explain what a callback function is and provide a simple example.",
+                "answer": "A callback is a plain JavaScript function passed to some method as an argument or option. It is a function that is to be executed after another function has finished executing, hence the name ‘call back‘. In JavaScript, functions are objects. Because of this, functions can take functions as arguments, and can be returned by other functions.",
+                "note": "function modifyArray(arr, callback) {// do something to arr here arr.push(100); callback();// then execute the callback function that was passed } "
+            },
+            {
+                "question": " What's the difference between host objects and native objects?",
+                "answer": "Native objects are objects that are part of the JavaScript language defined by the ECMAScript specification, such as String, Math, RegExp, Object, Function, etc. Host objects are provided by the runtime environment (browser or Node), such as window, XMLHTTPRequest, etc."
+            },
+            {
+                "question": " What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?",
+                "answer": "Some examples of languages that compile to JavaScript include CoffeeScript, Elm, ClojureScript, PureScript, and TypeScript. Advantages: Static types are awesome (in the case of TypeScript) for large projects that need to be maintained over time. Disadvantages: Require a build/compile process as browsers only run JavaScript and your code will need to be compiled into JavaScript before being served to browsers. 2. Most developers are not familiar with these languages and will need to learn it. There's a ramp up cost involved for your team if you use it for your projects. 3.These languages will always be behind the latest JavaScript standard."
+            },
+            {
+                "question": "Explain event bubbling and how one may prevent it",
+                "answer": "Event bubbling is the concept in which an event triggers at the deepest possible element, and triggers on parent elements in nesting order. As a result, when clicking on a child element one may exhibit the handler of the parent activating.One way to prevent event bubbling is using event.stopPropagation() or event.cancelBubble on IE < 9."
+            },
+            {
+                "question": " What is Closure? Give an example.",
+                "answer": "Closures are created whenever a variable that is defined outside the current scope is accessed from within some inner scope. It gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created. To use a closure, simply define a function inside another function and expose it."
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            }
+        ],
+        "Gotchas": [
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            }
+        ],
+        "React/Redux/SQL": [
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            }
+        ]
+    }
+}
