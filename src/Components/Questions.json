@@ -51,8 +51,8 @@
                 "answer": "It is a lightweight, interpreted programming language.It is designed for creating network-centric applications.It is complementary to and integrated with Java.It is an open and cross-platform scripting language."
             },
             {
-                "question": " Is JavaScript a case-sensitive language? if so how, if not can you name a language that is?",
-                "answer": "Yes, JavaScript is a case sensitive language.  The language keywords, variables, function names, and any other identifiers must always be typed with a consistent capitalization of letters."
+                "question": "Given a string with symbols,letters,numbers , how do you only return letters/numbers, how do you use match()",
+                "answer": "You can use a loop and search, filter() to filter out or match() which will searches a string for a match against a regular expression, and returns the matches s = s.match(/[A-Za-z0-9]/g) —return all string withing the range , a global, case-sensitive global- find every match without global - just first one (skip g) "
             },
             {
                 "question": " What are the advantages of JavaScript?",
@@ -71,16 +71,16 @@
                 "answer": "Typed Language is in which the values are associated with values and not with variables. It is of two types: Dynamically: in this, the variable can hold multiple types; like in JS a variable can take number, chars. Statically: in this, the variable can hold only one type, like in Java a variable declared of string can take only set of characters and nothing else."
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "what is a for/of loop and how do you use it?",
+                "answer": "The JavaScript for/of statement loops through the values of an iterable objects for/of lets you loop over data structures that are iterable such as Arrays, Strings, Maps, NodeLists, and more"
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "what is a for/in loop and how do you use it?",
+                "answer": "The JavaScript for/in statement loops through the properties of an object: for(let prop in person) { console.log(person[prop]) } this will print all the properties of person"
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "What will charAt() do",
+                "answer": "Returns the character at the specified index (position)"
             }
         ],
         "API related": [
@@ -101,40 +101,40 @@
                 "answer": "Local Storage – The data is not sent back to the server for every HTTP request (HTML, images, JavaScript, CSS, etc) – reducing the amount of traffic between client and server. It will stay until it is manually cleared through settings or program. Session Storage – It is similar to local storage; the only difference is while data stored in local storage has no expiration time, data stored in session storage gets cleared when the page session ends. Session Storage will leave when the browser is closed."
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "What is a GET HTTP request? ",
+                "answer": "GET requests are only used to request data (not modify).GET requests can be cached.GET requests remain in the browser history. GET requests can be bookmarked. GET requests should never be used when dealing with sensitive data GET requests have length restrictions"
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "What is a POST HTTP request? ",
+                "answer": "POST is used to send data to a server to create/update a resource.---POST requests are never cached. POST requests do not remain in the browser history. POST requests cannot be bookmarked. POST requests have no restrictions on data length"
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "What is a Put HTTP request?",
+                "answer": "PUT is used to send data to a server to create/update a resource"
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "Compare GET vs POST",
+                "answer": " GET is less secure compared to POST because data sent is part of the URL Never use GET when sending passwords or other sensitive information POST is a little safer than GET because the parameters are not stored in browser history or in web server logs. 2. GET has restrictions when sending data, the GET method adds the data to the URL; and the length of a URL is limited (maximum URL length is 2048 characters)meanwhile POST does not have any restrictions 3.Restriction on data type GET--Only ASCII characters allowed while POST has no restrcitions and binary data is also allowed 4. GET--Data is visible to everyone in the URL and POST-Data is not displayed in the URL "
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "What is a 200 status code",
+                "answer": "successful- This class of status codes indicates the action requested by the client was received, understood, and accepted"
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "What is a 100 status code",
+                "answer": "informational response- An informational response indicates that the request was received and understood. It is issued on a provisional basis while request processing continues. It alerts the client to wait for a final response."
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "What is a 300 status code",
+                "answer": "redirection- This class of status code indicates the client must take additional action to complete the request. Many of these status codes are used in URL redirection."
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "What is a 400 status code",
+                "answer": "client error-This class of status code is intended for situations in which the error seems to have been caused by the client. Except when responding to a HEAD request, the server should include an entity containing an explanation of the error situation, and whether it is a temporary or permanent condition. These status codes are applicable to any request method. User agents should display any included entity to the user--- commonly seen 404 not found 400 bad request 401 unauthorized"
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "What is a 500 status code",
+                "answer": "server error-The server failed to fulfill a request"
             },
             {
                 "question": "",
@@ -185,31 +185,32 @@
             },
             {
                 "question": " What is Closure? Give an example.",
-                "answer": "Closures are created whenever a variable that is defined outside the current scope is accessed from within some inner scope. It gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created. To use a closure, simply define a function inside another function and expose it."
+                "answer": "Closures are created whenever a variable that is defined outside the current scope is accessed from within some inner scope. It gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created. To use a closure, simply define a function inside another function and expose it. "
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "Explain Async/Await, how the code in js runs and what happens when it's not async await?",
+                "answer": "By default, code executes Synchronously, meaning it just runs one line after another. A line of code cannot run until the previous line runs. Some functions are asynchronous. These functions do not wait, and will just do its thing in the background while the code can go to the next line. Since these functions do not wait, they are called nonblocking. How do we know when the function is done then?-- modern javascript introduced Async/Await.You mark a function as asynchronous by putting the word 'async' in front. In order to force an async function to 'block' (aka, wait for it to finish before running next line), use await.  --- async function blah() { //do something} await console.log('hi')  this line basically says call do something first and return something await til this is done and log 'hi' "
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "What are Promises?",
+                "answer": " a Promise is an object that once called upon, will eventually resolve or reject and return a response based on some criteria that is specified within the Promise object.promise.then(function(result) { console.log(result); // 'Stuff worked!' }, function(err) { console.log(err); // Error: 'It broke' });    ",
+                "note": "- **fulfilled** - The action relating to the promise succeeded - **rejected** - The action relating to the promise failed - **pending** - Hasn't fulfilled or rejected yet - **settled** - Has fulfilled or rejected"
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "What is promise hell?",
+                "answer": "1)Promise chaining  - avoid nesting functions and refractor for clean code When you chain one promise after another "
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "What is currying and when do we use it? can you give an example?",
+                "answer": "a currying functioncurrFun takes in a function 'originalFun' and returns a function that takes in the first param of the originalFun and returns a function that takes in the second param etc."
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "what is a spread operator",
+                "answer": "takes a list, and converts it into a bunch of parameters."
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "what is a pure function ",
+                "answer": "A pure function will always return the same result whenever you call it. Pure functions cannot modify any variables outside of it."
             },
             {
                 "question": "",
@@ -332,40 +333,40 @@
         ],
         "React/Redux/SQL": [
             {
-                "question": "",
+                "question": "what are the rules of React Hooks? Name 2",
+                "answer": "1.Only call Hooks at the top level. Don’t call Hooks inside loops, conditions, or nested functions. By following this rule, you ensure that Hooks are called in the same order each time a component renders. That’s what allows React to correctly preserve the state of Hooks between multiple useState and useEffect calls. 2.Only call Hooks from React function components. Don’t call Hooks from regular JavaScript functions. (There is just one other valid place to call Hooks — your own custom Hooks. We’ll learn about them in a moment.) By following this rule, you ensure that all stateful logic in a component is clearly visible from its source code."
+            },
+            {
+                "question": "What is React? ",
+                "answer": " "
+            },
+            {
+                "question": "We have the core principle of keeping render() a pure method. What does that mean?",
+                "answer": "That means we shouldn't call setState(),query the Native UI or anything else that can mutate the existing state of the application."
+            },
+            {
+                "question": "What is Redux?",
+                "answer": "A library for react that allows you to maintain a state across your entire app. This allows you to have two different components talk to each other."
+            },
+            {
+                "question": "What is Redux Action",
+                "answer": "A way to set a state in redux. Redux does not allow you to set state directly, instead you call an action, which will trigger a reducer that will return the new state."
+            },
+            {
+                "question": "What does dispatch in Redux do? ",
+                "answer": "Calling a dispatch on an action is what makes the reducer run"
+            },
+            {
+                "question": "Describe a lifecyle in React ",
                 "answer": ""
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "How do you use UseEffect and what should you avoid?",
+                "answer": "When you call useEffect, you’re telling React to run your “effect” function after flushing changes to the DOM. Effects are declared inside the component so they have access to its props and state. By default, React runs the effects after every render — including the first render.//data fetching, subscriptions, or manually changing the DOM, if you want to only call useEffect once, pass in a [] as a second param"
             },
             {
-                "question": "",
-                "answer": ""
-            },
-            {
-                "question": "",
-                "answer": ""
-            },
-            {
-                "question": "",
-                "answer": ""
-            },
-            {
-                "question": "",
-                "answer": ""
-            },
-            {
-                "question": "",
-                "answer": ""
-            },
-            {
-                "question": "",
-                "answer": ""
-            },
-            {
-                "question": "",
-                "answer": ""
+                "question": "How do you use UseState?",
+                "answer": "We call it inside a function component to add some local state to it, React will preserve this state between re-renders. useState returns a pair: the current state value and a function that lets you update. You call this function from an event handler or somewhere else. It’s similar to ` this.setState` in a class, except it doesn't merge the old and new state together. When you call setBlah, it completely ignores the previous value, and replaces with the new value"
             },
             {
                 "question": "",
