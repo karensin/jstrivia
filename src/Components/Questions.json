@@ -251,32 +251,33 @@
         ],
         "Gotchas": [
             {
-                "question": "",
-                "answer": ""
+                "question": "Are Varibles and function names case insensitive?",
+                "answer": "No. remember that native javascript function and CSS properties in javascript are camelCase"
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "Why is it if you include a hard line break in between quotes you’ll get a parse error (unterminated string)?",
+                "answer": "Line breaks are interpreted as line-ending semicolons. "
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "Will pareInt return the integer to base 10 by default? ",
+                "answer": "No. Always pass in your second argument (radix/base) which could be anything from 2-36 Example : const parsed = parseInt(x, base);"
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "What is the rule for overwriting functions / overloading functions? what will happen when you overwrite/reassign a function",
+                "answer": "When you declare a function more than once, the last declaration of that function will overwrite all previous version of that function throwing no errors or warnings."
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "What is the rule for using For Each ?",
+                "answer": "Never use for each to iterate thru an array: only use for each when needing to iterated thru object properties and methods. The enumeration will include all of the properties—including functions and prototype properties that you might not be interested in—so filter out the values you don’t want using hasOwnProperty method and typeof to exclude functions.",
+                "note": "generally you’ll want to opt for for ... in for objects and use the for loop for arrays:"
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "is Undefined ≠ null?",
+                "answer": "Null is for an object, undefined is for a property, method or variable. To be null, your object has to be defined. If your object is not defined, and you test to see whether it’s null, since it’s not defined, it can’t test, and will throw an error."
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "If we want to calculate 10-2 and divide by 2 ? What is the correct way to put in javascript and why?  ",
+                "answer": "(10-2)/2 if you put 10-2/2, it will calculate mutiplication/division, put () where u need to do you addition and subtraction first--like proper math--ew"
             },
             {
                 "question": "",

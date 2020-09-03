@@ -1,6 +1,13 @@
 import React from 'react';
 import './App.css';
-
+import 'semantic-ui-css/semantic.min.css'
+import { useEffect, useState } from 'react';
+import data from './Components/Questions.json'
+import { Card, Icon, Image } from 'semantic-ui-react'
+import Board from './Components/Board'
+import dataCards from './Components/Cards'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button, Label } from 'semantic-ui-react'
 
 // this is a js & react trivia game
 // a component for the board to display and hold all the trivia cards 
@@ -26,15 +33,28 @@ import './App.css';
 
 //process- made json file for all categories- each with 20 Q&A
 function App() {
+  const [basic, setBasic] = useState([])
+  const [APIQ, setAPIQ] = useState([])
+  const [gotchas, setgotchas] = useState([])
+  const [advancedjs, setadvancedjs] = useState([])
+
+  useEffect(() => {
+    console.log(data)
+    setBasic(data['cards']['basic'])
+    setAPIQ(data['cards']['API related'])
+    setgotchas(data['cards']['Gotchas'])
+    setadvancedjs(data['cards']['Advanced js'])
+  }, [])
 
 
   return (
     <div className="App">
       <header className="App-header">
-        Javascript && React Trivia
-         <button> start </button>
+        Frontend Trivia
+        {/* {basic.map((list) => <Card> {list['question']}</Card>)} */}
+        <button> start </button>
       </header>
-
+      <Board basic={basic} />
     </div>
   );
 }
