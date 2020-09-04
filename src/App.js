@@ -34,10 +34,10 @@ import { Button, Label } from 'semantic-ui-react'
 //process- made json file for all categories- each with 20 Q&A
 
 class CardInfo {
-  constructor(question, answer) {
+  constructor(question, answer, reveal = false) {
     this.question = question
     this.answer = answer
-    this.reveal = false
+    this.reveal = reveal
   }
 }
 
@@ -77,17 +77,32 @@ function App() {
   }, [])
 
   useEffect(() => {
+    console.log("Aaaaaaaaaaa")
     console.log(basic, 'hi')
   }, [basic])
 
 
   function onClickRevealAnswer(e, card, category) {
-
-    if (!card['reveal']) {
-      card['reveal'] = true
-    }
+    // card => object that represents a card
+    // card => a string that says "basic"
+    // if (!card['reveal']) {
+    //   card['reveal'] = true
+    // }
+    console.log('category is', category)
     if (category === 'basic') {
-      setBasic([...basic, card])
+      console.log("is this happening")
+
+      let newBasic = basic.map((c) => {
+        if (c.question !== card.question) {
+          return c;
+        } else {
+          console.log('true')
+          return new CardInfo(c.question, c.answer, true);
+        }
+      })
+      console.log('____', newBasic)// if question is same as card question return
+      setBasic([...newBasic])  // todo first question why did this not trigger useffect
+      // todo this also supposedly appends to list each time
     }
     if (category === 'API related') {
       setAPIQ([...APIQ, card])
@@ -98,9 +113,9 @@ function App() {
     if (category === 'Advanced js') {
       setadvancedjs([...advancedjs, card])
     }
-    console.log(card['answer'])
+    console.log(card, category)
 
-    return (<div> Answer: {card['answer']}</div>)
+
   }
 
   return (
