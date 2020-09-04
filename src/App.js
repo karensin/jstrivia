@@ -32,20 +32,76 @@ import { Button, Label } from 'semantic-ui-react'
 
 
 //process- made json file for all categories- each with 20 Q&A
+
+class CardInfo {
+  constructor(question, answer) {
+    this.question = question
+    this.answer = answer
+    this.reveal = false
+  }
+}
+
+
 function App() {
+  const [newData, setData] = useState([])
   const [basic, setBasic] = useState([])
   const [APIQ, setAPIQ] = useState([])
   const [gotchas, setgotchas] = useState([])
   const [advancedjs, setadvancedjs] = useState([])
+  const [reveal, setReveal] = useState({})
+
 
   useEffect(() => {
-    console.log(data)
-    setBasic(data['cards']['basic'])
-    setAPIQ(data['cards']['API related'])
-    setgotchas(data['cards']['Gotchas'])
-    setadvancedjs(data['cards']['Advanced js'])
+    for (let category in data['cards']) {
+      let cardList = []
+      for (let card in data['cards'][category]) {
+        if (data['cards'][category][card]['question'].length) {
+          let newCard = new CardInfo(data['cards'][category][card]['question'], data['cards'][category][card]['answer'])
+          cardList.push(newCard)
+        }
+      }
+      if (category === 'basic') {
+        setBasic([...cardList])
+      }
+      if (category === 'API related') {
+        setAPIQ([...cardList])
+      }
+      if (category === 'Gotchas') {
+        setgotchas([...cardList])
+      }
+      if (category === 'Advanced js') {
+        setadvancedjs([...cardList])
+      }
+    }
+
   }, [])
 
+  useEffect(() => {
+    console.log(basic, 'hi')
+  }, [basic])
+
+
+  function onClickRevealAnswer(e, card, category) {
+
+    if (!card['reveal']) {
+      card['reveal'] = true
+    }
+    if (category === 'basic') {
+      setBasic([...basic, card])
+    }
+    if (category === 'API related') {
+      setAPIQ([...APIQ, card])
+    }
+    if (category === 'Gotchas') {
+      setgotchas([...gotchas, card])
+    }
+    if (category === 'Advanced js') {
+      setadvancedjs([...advancedjs, card])
+    }
+    console.log(card['answer'])
+
+    return (<div> Answer: {card['answer']}</div>)
+  }
 
   return (
     <div className="App">
@@ -54,7 +110,7 @@ function App() {
         {/* {basic.map((list) => <Card> {list['question']}</Card>)} */}
         <button> start </button>
       </header>
-      <Board basic={basic} />
+      <Board basic={basic} APIQ={APIQ} gotchas={gotchas} advancedjs={advancedjs} onClickRevealAnswer={onClickRevealAnswer} />
     </div>
   );
 }
